@@ -1,4 +1,4 @@
-import Home from "../src/pages";
+import Home from "../pages";
 
 const storyConfig = {
   title: "Home"

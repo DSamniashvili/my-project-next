@@ -4,7 +4,7 @@ import {Calendar} from '@assets/icons/Calendar';
 import AppButton from './AppButton';
 
 export default {
-   title: 'components / shared / Button',
+   title: 'components / shared / AppButton',
    component: AppButton,
    args: {
       buttonType: ButtonTypeEnum.PRIMARY,

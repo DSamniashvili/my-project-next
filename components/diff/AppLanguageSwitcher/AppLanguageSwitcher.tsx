@@ -1,5 +1,5 @@
 'use client';
-import {useLanguageSwitcherContext} from 'contexts';
+import { useLanguageSwitcherContext } from '@contexts/index';
 import Link from 'next/link';
 import {
    SAppLanguageSwitcherContainer,

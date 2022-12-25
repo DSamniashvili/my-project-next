@@ -2,7 +2,7 @@
 import AppButton from '@components/shared/AppButton';
 import AppLinkButton from '@components/shared/AppLinkButton/AppLinkButton';
 import {ButtonSizes} from '@components/shared/AppLinkButton/AppLinkButton.types';
-import {useDeviceDetect} from 'hooks';
+import { useDeviceDetect } from '@hooks/useDeviceDetect';
 import {FC} from 'react';
 
 import {

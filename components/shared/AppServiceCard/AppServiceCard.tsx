@@ -9,15 +9,17 @@ import {
    SAppServiceIconBox,
 } from './SAppServiceCard.styled';
 import {AppServiceCardProps} from './AppServiceCard.types';
-import {ButtonSizes} from '../AppLinkButton/AppLinkButton.types';
 import AppLinkButton from '../AppLinkButton';
+import {useDeviceDetect} from '@hooks/useDeviceDetect';
 import { IconByService } from '@utils/iconByService/iconByService.utils';
 
 const AppServiceCard: NextPage<AppServiceCardProps> = ({
    service,
    description,
    linkText,
+   url,
 }) => {
+   const {isMobile} = useDeviceDetect();
    return (
       <SAppServiceCard>
          <SAppServiceIconBox>
@@ -25,12 +27,7 @@ const AppServiceCard: NextPage<AppServiceCardProps> = ({
          </SAppServiceIconBox>
          <SAppService>{service}</SAppService>
          <SAppServiceDescription>{description}</SAppServiceDescription>
-         <AppLinkButton
-            href="/"
-            size={ButtonSizes.SMALL}
-            text={linkText}
-            hasArrow
-         />
+         <AppLinkButton href={url} text={linkText} hasArrow={!isMobile} bold />
       </SAppServiceCard>
    );
 };

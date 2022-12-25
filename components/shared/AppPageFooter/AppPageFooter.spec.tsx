@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 import AppPageFooter from './AppPageFooter';
 
 describe('[Component] AppPageFooter', () => {
-   it('should render component', () => {
+   it.skip('should render component', () => {
       render(
          <AppPageFooter
             navigation={[

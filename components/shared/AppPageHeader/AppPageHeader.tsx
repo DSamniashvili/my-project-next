@@ -3,9 +3,9 @@
 import React, {FC} from 'react';
 import {SPageHeader} from './SAppPageHeader.styled';
 import {IAppPageHeaderProps} from './AppPageHeader.types';
-import {useLanguageSwitcherContext} from 'contexts';
 import AppLanguageSwitcher from '@components/diff/AppLanguageSwitcher';
 import ToggleTheme from '@components/diff/ToggleTheme';
+import { useLanguageSwitcherContext } from '@contexts/index';
 
 const AppPageHeader: FC<IAppPageHeaderProps> = ({title, path = '/'}) => {
    const {

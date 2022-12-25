@@ -9,4 +9,6 @@ export interface AppServiceCardProps {
    service: AppServicesEnum;
    description: string;
    linkText: string;
+   url: string;
+   id: string | number;
 }

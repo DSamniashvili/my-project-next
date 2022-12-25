@@ -9,6 +9,7 @@ export default {
       service: AppServicesEnum.LAND,
       description: 'Upgrade efficiency with live trucking',
       linkText: 'Learn more',
+      url: '#',
    },
 } as ComponentMeta<typeof AppServiceCard>;
 

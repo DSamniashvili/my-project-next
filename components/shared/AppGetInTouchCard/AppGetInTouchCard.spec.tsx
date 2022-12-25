@@ -1,13 +1,12 @@
 import {render, screen} from '@testing-library/react';
-import AppServiceCard from './AppServiceCard';
-import {AppServicesEnum} from './AppServiceCard.types';
+import AppGetInTouchCard from './AppGetInTouchCard';
 
-describe('[Component] AppServiceCard', () => {
+describe('[Component] AppGetInTouchCard', () => {
    it('should render component', () => {
       render(
-         <AppServiceCard
+         <AppGetInTouchCard
             id={1}
-            service={AppServicesEnum.LAND}
+            title="test-title"
             description="test-description"
             linkText="test-link-text"
             url="test-link"
@@ -17,39 +16,25 @@ describe('[Component] AppServiceCard', () => {
       expect(screen.getByText('test-description')).toBeInTheDocument();
    });
 
-   it('should render correct service icon', () => {
+   it('should render correct title', () => {
       render(
-         <AppServiceCard
+         <AppGetInTouchCard
             id={1}
-            service={AppServicesEnum.AIRFREIGHT}
+            title="test-title"
             description="test-description"
             linkText="test-link-text"
             url="test-link"
          />,
       );
 
-      expect(screen.getByLabelText('Air icon')).toBeInTheDocument();
-   });
-
-   it('should render correct service name', () => {
-      render(
-         <AppServiceCard
-            id={1}
-            service={AppServicesEnum.LAND}
-            description="test-description"
-            linkText="test-link-text"
-            url="test-link"
-         />,
-      );
-
-      expect(screen.getByText('LAND')).toBeInTheDocument();
+      expect(screen.getByText('test-title')).toBeInTheDocument();
    });
 
    it('should render correct description', () => {
       render(
-         <AppServiceCard
+         <AppGetInTouchCard
             id={1}
-            service={AppServicesEnum.LAND}
+            title="test-title"
             description="test-description"
             linkText="test-link-text"
             url="test-link"
@@ -61,9 +46,9 @@ describe('[Component] AppServiceCard', () => {
 
    it('should render link button', () => {
       render(
-         <AppServiceCard
+         <AppGetInTouchCard
             id={1}
-            service={AppServicesEnum.LAND}
+            title="test-title"
             description="test-description"
             linkText="test-link-text"
             url="test-link"

@@ -1,9 +1,17 @@
 import tw from 'twin.macro';
 import styled from 'styled-components';
 
-export const SPlatformAndVisbilityContainer = styled.div`
-   ${tw`px-20 py-20 bg-app-color-white app-max-width-small:px-8
-   app-max-width-small:py-14 flex justify-around app-max-width-small:flex-col app-max-width-small:items-center`}
+export const SPlatformAndVisbilityContainer = styled.section`
+   ${tw`py-20 bg-app-color-white
+   app-max-width-small:py-14 flex app-max-width-small:flex-col app-max-width-small:items-center`}
+`;
+
+export const SPlatformAndVisibilityWrapper = styled.div`
+   ${tw`flex flex-row w-full`}
+`;
+
+export const SPlatformAndVisibilityContentContainer = styled.div`
+   ${tw`flex flex-row w-full m-app-margin-100 justify-between app-max-width-extra-small:flex-col`}
 `;
 
 export const SPlatformAndVisbilityDivider = styled.div`
@@ -29,5 +37,9 @@ export const SPlatformAndVisbilityContent = styled.div`
 `;
 
 export const SPlatformAndVisiblityHeader = styled.h2`
-   ${tw`text-app-font-48 font-semibold`}
+   ${tw`font-semibold`}
 `;
+
+SPlatformAndVisibilityWrapper.defaultProps = {
+   className: 'container',
+};

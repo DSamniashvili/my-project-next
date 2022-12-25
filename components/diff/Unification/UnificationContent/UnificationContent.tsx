@@ -1,4 +1,3 @@
-'use client';
 import AppButton from '@components/shared/AppButton';
 import AppLinkButton from '@components/shared/AppLinkButton/AppLinkButton';
 import {useDeviceDetect} from '@hooks/useDeviceDetect';
@@ -50,11 +49,11 @@ export const UnificationContent: FC<UnificationContentProps> = ({
             </SPersonalizedServicesContent>
             <SUnificationFigure>
                <SUnificationImage
-                  width="200"
-                  height="200"
                   src={image}
                   alt={title}
-                  priority={true}
+                  style={{borderRadius: '20px', width: '100%'}}
+                  objectFit="cover"
+                  layout="fill"
                />
             </SUnificationFigure>
          </SPersonalizedServices>

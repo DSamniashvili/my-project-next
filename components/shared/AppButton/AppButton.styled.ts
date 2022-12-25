@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components';
 import {AppButtonProps, ButtonTypeEnum} from './AppButton.types';
 import tw from 'twin.macro';
+
 export const SAppButton = styled.button<AppButtonProps>`
    ${tw`px-14 py-3.5 rounded-app-border-radius-10 font-bold cursor-pointer transition-all border-none scale-100`}
    font-size: var(--font-20);

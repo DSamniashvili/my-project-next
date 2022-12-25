@@ -5,6 +5,7 @@ describe('[Component] AppBanner', () => {
    it('should render component', () => {
       render(
          <AppBanner
+            url="#"
             title="test-title"
             description="test-description"
             buttonText="test-buttonText"
@@ -18,6 +19,7 @@ describe('[Component] AppBanner', () => {
    it('should render correct title', () => {
       render(
          <AppBanner
+            url="#"
             title="test-title"
             description="test-description"
             buttonText="test-buttonText"
@@ -31,6 +33,7 @@ describe('[Component] AppBanner', () => {
    it('should render correct description', () => {
       render(
          <AppBanner
+            url="#"
             title="test-title"
             description="test-description"
             buttonText="test-buttonText"
@@ -44,6 +47,7 @@ describe('[Component] AppBanner', () => {
    it('should render correct buttonText', () => {
       render(
          <AppBanner
+            url="#"
             title="test-title"
             description="test-description"
             buttonText="test-buttonText"

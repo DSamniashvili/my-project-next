@@ -9,7 +9,7 @@ jest.mock('next/router', () => ({
 
 describe('[Component] PageHeader', () => {
    it('should render component', () => {
-      render(<PageHeader title="@test" />);
+      render(<PageHeader />);
 
       expect(screen.getByText('Change the theme!')).toBeInTheDocument();
    });

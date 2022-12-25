@@ -1,4 +1,3 @@
-'use client';
 import AppButton from '@components/shared/AppButton';
 import React, {FC} from 'react';
 import Image from 'next/image';
@@ -19,6 +18,7 @@ const AppBanner: FC<BannerProps> = ({
    description,
    buttonText,
    image,
+   url,
 }) => {
    const strArray = title.split(' ');
    return (
@@ -45,7 +45,9 @@ const AppBanner: FC<BannerProps> = ({
                <Image
                   src={image}
                   alt="container-img"
-                  style={{objectFit: 'cover', borderRadius: '20px'}}
+                  style={{borderRadius: '20px', width: '100%'}}
+                  objectFit="cover"
+                  layout="fill"
                />
             </SBannerImageWrapper>
          </SBannerContainer>

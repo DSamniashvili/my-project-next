@@ -6,6 +6,11 @@ export interface UnificationProps {
    reverse?: boolean;
 }
 
+export const SUnificationContainer = styled.section`
+   display: flex;
+   flex-direction: column;
+`;
+
 export const SUnificationContainerWrapper = styled.div<UnificationProps>`
    ${tw`grid place-items-center`}
    ${(props) => {
@@ -68,7 +73,10 @@ export const SUnificationLink = styled.div`
 `;
 
 export const SUnificationFigure = styled.figure`
-   ${tw`m-0 p-0 h-64 overflow-hidden rounded-2xl max-w-[450px] app-max-width-extra-small:max-w-[400px] app-max-width-extra-small:h-52`}
+   position: relative;
+   width: 450px;
+   height: 250px;
+   ${tw`m-0 p-0 h-64 overflow-hidden app-max-width-extra-small:w-[190px] app-max-width-extra-small:h-[123px]`}
 `;
 
 export const SUnificationImage = styled(Image)`

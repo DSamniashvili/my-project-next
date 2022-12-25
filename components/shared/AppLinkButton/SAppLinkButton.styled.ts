@@ -9,15 +9,26 @@ export const SAppLinkButton = styled(Link)`
 interface SAppLinkButtonTextProps {
    bold?: boolean;
    underline?: boolean;
+   hasArrow?: boolean;
 }
 
 export const SAppLinkButtonText = styled.p<SAppLinkButtonTextProps>`
-   ${tw`text-app-color-primary m-0 font-semibold`}
+   ${tw`text-app-color-primary m-0 font-semibold text-app-font-14 app-max-width-extra-small:text-app-font-10 flex justify-center [align-items: center]`}
 
    ${(props) => {
       if (props.bold) {
          return css`
             font-weight: 700;
+         `;
+      }
+   }}
+
+   ${(props) => {
+      if (props.hasArrow) {
+         return css`
+            svg {
+               ${tw`ml-2`}
+            }
          `;
       }
    }}

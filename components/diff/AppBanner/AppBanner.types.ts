@@ -3,4 +3,5 @@ export interface BannerProps {
    description: string;
    buttonText: string;
    image: string;
+   url: string;
 }

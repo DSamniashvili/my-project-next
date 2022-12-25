@@ -1,4 +1,3 @@
-'use client';
 import React, {FC} from 'react';
 import {
    SEventBannerCloseButton,
@@ -9,17 +8,21 @@ import {
    SEventBannerWrapper,
    SAppEventBannerContainer,
 } from './SAppEventBanner.styled';
-import {EventBannerProps} from './AppEventBanner.types';
 import AppLinkButton from '@components/shared/AppLinkButton/AppLinkButton';
 import {CloseButton} from '@assets/icons/CloseButton';
+import {NextPage} from 'next';
 
-const AppEventBanner: FC<EventBannerProps> = ({
-   title,
-   description,
-   linkText,
-   url = '#',
-}) => {
+const AppEventBannerContent = {
+   title: 'UPCOMING WEBINAR:',
+   description: 'Market rate and development asia-to-europe sea freight',
+   linkText: 'Learn more',
+   url: '/',
+};
+
+const AppEventBanner: NextPage = () => {
+   const {title, description, linkText, url} = AppEventBannerContent;
    // TODO - temporarily handling event banner in this way. Will be updated when all routes are ready!
+
    const handleCloseBanner = () => {
       window.location.reload();
    };

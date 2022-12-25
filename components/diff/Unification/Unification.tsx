@@ -1,4 +1,3 @@
-'use client';
 import AppButton from '@components/shared/AppButton';
 import {ButtonTypeEnum} from '@components/shared/AppButton/AppButton.types';
 import {UnificationContent} from './UnificationContent';
@@ -6,11 +5,12 @@ import {
    SUnificationHeader,
    SUnificationHeaderH2,
    SUnificationContainerWrapper,
+   SUnificationContainer,
 } from './SUnification.styled';
 import {UnificationData} from './Unification.data';
 
 const Unification = () => (
-   <section>
+   <SUnificationContainer>
       <SUnificationContainerWrapper>
          <SUnificationHeader>
             <SUnificationHeaderH2>
@@ -24,7 +24,7 @@ const Unification = () => (
       {UnificationData.map((data, index) => (
          <UnificationContent {...data} index={index} key={data.id} />
       ))}
-   </section>
+   </SUnificationContainer>
 );
 
 export default Unification;

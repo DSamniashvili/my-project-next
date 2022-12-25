@@ -1,5 +1,3 @@
-'use client';
-
 import {FC} from 'react';
 import {SFooterWrapper, SFooterContent} from './SAppPageFooterCopyright.styled';
 import {socialMediaURLs} from '@constant/socialLinks';

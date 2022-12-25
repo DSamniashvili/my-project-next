@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import {NextPage} from 'next';
 import {SAppLinkButton, SAppLinkButtonText} from './SAppLinkButton.styled';
@@ -15,7 +13,10 @@ const AppLinkButton: NextPage<AppLinkButtonProps> = ({
 }) => {
    return (
       <SAppLinkButton href={href}>
-         <SAppLinkButtonText bold={bold} underline={underline}>
+         <SAppLinkButtonText
+            bold={bold}
+            underline={underline}
+            hasArrow={hasArrow}>
             {text}
             {hasArrow && <RightArrow />}
          </SAppLinkButtonText>

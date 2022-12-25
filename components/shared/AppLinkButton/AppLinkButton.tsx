@@ -17,8 +17,8 @@ const AppLinkButton: NextPage<AppLinkButtonProps> = ({
       <SAppLinkButton href={href}>
          <SAppLinkButtonText bold={bold} underline={underline}>
             {text}
+            {hasArrow && <RightArrow />}
          </SAppLinkButtonText>
-         {hasArrow && <RightArrow />}
       </SAppLinkButton>
    );
 };

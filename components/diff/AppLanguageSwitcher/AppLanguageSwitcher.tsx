@@ -1,38 +1,38 @@
-'use client';
-import {useLanguageSwitcherContext} from '@contexts/index';
+import React from 'react';
 import Link from 'next/link';
-import {
-   SAppLanguageSwitcherContainer,
-   SAppLanguageSwitcherWrapper,
-} from './AppLanguageSwitcher.styled';
-import {ILanguage} from './AppLanguageSwitcher.types';
+import {useRouter} from 'next/router';
 
-const AppLanguageSwitcher = ({path}: {path: string}) => {
-   const {languageSwitcherModalOpen} = useLanguageSwitcherContext();
+const AppLanguageSwitcher = () => {
+   const router = useRouter();
+   const {locales, locale: activeLocale, pathname, query, asPath} = router;
 
-   const languages: ILanguage[] = [
-      {
-         slug: 'en',
-         name: 'English',
-      },
-      {
-         slug: 'ka',
-         name: 'ქართული',
-      },
-   ];
+   const handleLocaleChange = (event: any) => {
+      const value = event.target.value;
 
-   return languageSwitcherModalOpen ? (
-      <SAppLanguageSwitcherContainer>
-         <SAppLanguageSwitcherWrapper>
-            {languages.map(({slug, name}: ILanguage) => (
-               <Link href={`/${slug}/${path}`} scroll={false} key={slug}>
-                  {name}
-               </Link>
-            ))}
-         </SAppLanguageSwitcherWrapper>
-      </SAppLanguageSwitcherContainer>
-   ) : (
-      <></>
+      router.push(router.route, router.asPath, {
+         locale: value,
+      });
+   };
+
+   return (
+      <header>
+         <nav>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+         </nav>
+
+         <select onChange={handleLocaleChange} value={activeLocale}>
+            {locales?.map((locale, index) => {
+               return (
+                  <option value={locale} key={locale}>
+                     <Link href={{pathname, query}} as={asPath} locale={locale}>
+                        {locale}
+                     </Link>
+                  </option>
+               );
+            })}
+         </select>
+      </header>
    );
 };
 

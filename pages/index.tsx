@@ -1,3 +1,4 @@
+import AppPageHeader from '@components/shared/AppPageHeader';
 import {useModalContext} from '@contexts/ModalContext/ModalContext';
 import type {NextPage} from 'next';
 import styled from 'styled-components';
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
 
    return (
       <div className="flex min-h-screen flex-col items-center justify-center py-2">
+         <AppPageHeader title="next12" />
          <TWStyledButton isRed={true} onClick={toggleModal}>
             toggle the modal
          </TWStyledButton>

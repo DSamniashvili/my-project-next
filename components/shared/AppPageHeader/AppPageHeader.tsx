@@ -7,11 +7,11 @@ import {IAppPageHeaderProps} from './AppPageHeader.types';
 import ToggleTheme from '@components/diff/ToggleTheme';
 import AppLanguageSwitcher from '@components/diff/AppLanguageSwitcher';
 
-const AppPageHeader: NextPage<IAppPageHeaderProps> = ({title, path = '/'}) => {
+const AppPageHeader: NextPage<IAppPageHeaderProps> = ({title}) => {
    return (
       <SPageHeader isBold="true">
          <ToggleTheme />
-         <AppLanguageSwitcher path={path} />
+         <AppLanguageSwitcher />
          PageHeader component across all pagess {title}
       </SPageHeader>
    );

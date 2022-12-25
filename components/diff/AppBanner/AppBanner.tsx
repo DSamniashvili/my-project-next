@@ -46,7 +46,6 @@ const AppBanner: FC<BannerProps> = ({
                   src={image}
                   alt="container-img"
                   style={{objectFit: 'cover', borderRadius: '20px'}}
-                  fill={true}
                />
             </SBannerImageWrapper>
          </SBannerContainer>

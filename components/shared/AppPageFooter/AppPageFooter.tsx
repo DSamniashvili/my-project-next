@@ -24,7 +24,6 @@ const AppPageFooter: FC<IAppPageFooterProps> = ({navigation}) => {
                   src={OomofoxLogo}
                   alt="Omofox Logo"
                   style={{objectFit: 'contain'}}
-                  fill={true}
                />
             </SAppImageWrapper>
          </SAppPageFooterLogo>

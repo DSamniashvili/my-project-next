@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component] PlatFormAndVisiblity should render platform transltions correctly 1`] = `
+<div>
+  <section
+    class="SPlatformAndVisiblitystyled__SPlatformAndVisbilityContainer-sc-vqbjye-0 jhlzeT"
+  >
+    <div
+      class="SPlatformAndVisiblitystyled__SPlatformAndVisibilityWrapper-sc-vqbjye-1 iWdPqR container"
+    >
+      <div
+        class="SPlatformAndVisiblitystyled__SPlatformAndVisibilityContentContainer-sc-vqbjye-2 fdDKNy"
+      >
+        <div
+          class="flex"
+        >
+          <div>
+            <div
+              class="SPlatformAndVisiblitystyled__SPlatformAndVisbilityContent-sc-vqbjye-5 iPcflY"
+            >
+              <h2
+                class="SPlatformAndVisiblitystyled__SPlatformAndVisiblityHeader-sc-vqbjye-6 hWhFhC"
+              >
+                platform
+              </h2>
+              <p
+                class="SPlatformAndVisiblitystyled__SPlatformAndVisbilityParagraph-sc-vqbjye-4 gAcEjJ"
+              >
+                See the limitless opportunities to organize and manage the supply chain with less clicks and more logistics.
+              </p>
+              <button
+                class="AppButtonstyled__SAppButton-sc-i11sy7-0 TuVHs"
+                role="button"
+              >
+                get your demo
+              </button>
+            </div>
+          </div>
+          <div
+            class="SPlatformAndVisiblitystyled__SPlatformAndVisbilityDivider-sc-vqbjye-3 juQcHF"
+          />
+        </div>
+        <div
+          class="flex"
+        >
+          <div>
+            <div
+              class="SPlatformAndVisiblitystyled__SPlatformAndVisbilityContent-sc-vqbjye-5 iPcflY"
+            >
+              <h2
+                class="SPlatformAndVisiblitystyled__SPlatformAndVisiblityHeader-sc-vqbjye-6 hWhFhC"
+              >
+                visibility
+              </h2>
+              <p
+                class="SPlatformAndVisiblitystyled__SPlatformAndVisbilityParagraph-sc-vqbjye-4 gAcEjJ"
+              >
+                Sit back, relax, and enjoy the visualization of your cargo in transit through OMOFOX platform.
+              </p>
+              <button
+                class="AppButtonstyled__SAppButton-sc-i11sy7-0 TuVHs"
+                role="button"
+              >
+                Join now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,197 +1,196 @@
 @font-face {
-	font-family: 'Montserrat-Regular';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: local('Montserrat-Regular'),
-	   url(/assets/fonts/Montserrat-Regular.woff2) format('woff2');
- }
- 
- @font-face {
-	font-family: 'Montserrat-Bold';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: local('Montserrat-Bold'),
-	   url(/assets/fonts/Montserrat-Bold.woff2) format('woff2');
- }
- 
- @font-face {
-	font-family: 'Poppins-Regular';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: local('Poppins-Regular'),
-	   url(/assets/fonts/Poppins-Regular.woff2) format('woff2');
- }
- 
- @font-face {
-	font-family: 'Poppins-Bold';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: local('Poppins-Bold'),
-	   url(/assets/fonts/Poppins-Bold.woff2) format('woff2');
- }
- 
- @font-face {
-	font-family: 'AvenirNextGeorgian';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: local('AvenirNextGeorgian'),
-	   url(/assets/fonts/AvenirNextGeorgian.otf) format('otf');
- }
- 
- * {
-	margin: 0 0 0 0;
- }
- 
- button {
-	margin: 0 0 0 0;
- }
- 
- :root {
-	--color-primary: #ff0202;
-	--color-primary-01: #ff02021a;
-	--color-primary-05: rgba(231, 29, 54, 0.05);
-	--color-primary-01: #ff02021a;
-	--color-secondary: #34343f;
-	--color-secondary-02: #34343f33;
-	--color-black: #000000;
-	--color-black-08: #000000cc;
-	--color-black-06: #00000099;
-	--color-texts: #b3b3b3;
-	--color-background: #f9f9f9;
-	--color-white: #ffffff;
-	--color-white-09: #ffffffe5;
- 
-	/*margins / paddings / space-between */
-	--spacing-4: 4px;
-	--spacing-8: 8px;
-	--spacing-10: 10px;
-	--spacing-12: 12px;
-	--spacing-16: 16px;
-	--spacing-20: 20px;
-	--spacing-24: 24px;
-	--spacing-32: 32px;
-	--spacing-40: 40px;
-	--spacing-60: 60px;
-	--spacing-80: 80px;
-	--spacing-100: 100px;
-	--spacing-120: 120px;
- 
-	/* font */
-	--font-10: 10px;
-	--font-12: 12px;
-	--font-14: 14px;
-	--font-16: 16px;
-	--font-18: 18px;
-	--font-20: 20px;
-	--font-22: 22px;
-	--font-30: 30px;
-	--font-40: 40px;
-	--font-50: 50px;
-	--font-48: 48px;
- 
-	/* borders */
-	--rounded-10: 10px;
-	--rounded-20: 20px;
- 
-	--border-radius-one-point-five: 1.5px;
-	--border-radius-2: 2px;
- 
-	/* fonts */
-	--font-poppins: 'Poppins-Regular', sans-serif;
-	--font-poppins-bold: 'Poppins-Bold', sans-serif;
-	--font-montserrat: 'Montserrat-Regular', sans-serif;
-	--font-montserrat-bold: 'Montserrat-Bold', sans-serif;
-	--font-avenir: 'AvenirNextGeorgian', sans-serif;
- }
- 
- [data-theme='dark'] {
-	--color-primary: #34343f;
-	--color-primary-05: rgba(52, 52, 63, 0.05);
-	--color-secondary: #ff0202;
-	--color-black: #ffffff;
-	--color-texts: #f9f9f9;
-	--color-background: #b3b3b3;
-	--color-background-light: #f9f9f9;
-	--color-white: #000000;
-	/* We can use tailwind CSS default theme colors as well */
-	--color-tailwind-theme: theme(colors.fuchsia.700);
- }
- 
- [data-theme='light'] {
-	--color-primary: #ff0202;
-	--color-primary-05: rgba(231, 29, 54, 0.05);
-	--color-secondary: #34343f;
-	--color-black: #000000;
-	--color-texts: #b3b3b3;
-	--color-background: #f9f9f9;
-	--color-background-light: #efefef;
-	--color-white: #ffffff;
- }
- 
- body {
-	background-color: var(--color-background-light);
- }
- 
- .container {
-	max-width: 1440px;
-	box-sizing: border-box;
-	margin: 0 auto;
- }
- 
- *[lang='en'] {
-	font-family: var(--font-poppins);
- }
- *[lang='ka'] {
-	font-family: var(--font-avenir);
- }
- 
- @media screen and (min-width: 1024px) {
-	h1 {
-	   font-size: var(--font-50);
-	}
-	h2 {
-	   font-size: var(--font-40);
-	}
-	h3 {
-	   font-size: var(--font-30);
-	}
-	p {
-	   font-size: var(--font-20);
-	}
- }
- 
- @media screen and (min-width: 480px) and (max-width: 1025px) {
-	h1 {
-	   font-size: var(--font-40);
-	}
-	h2 {
-	   font-size: var(--font-30);
-	}
-	h3 {
-	   font-size: var(--font-22);
-	}
-	p {
-	   font-size: var(--font-16);
-	}
- }
- 
- @media screen and (max-width: 479px) {
-	h1 {
-	   font-size: var(--font-30);
-	}
-	h2 {
-	   font-size: var(--font-24);
-	}
-	h3 {
-	   font-size: var(--font-18);
-	}
-	p {
-	   font-size: var(--font-12);
-	}
- }
- 
+   font-family: 'Montserrat-Regular';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: local('Montserrat-Regular'),
+      url(/assets/fonts/Montserrat-Regular.woff2) format('woff2');
+}
+
+@font-face {
+   font-family: 'Montserrat-Bold';
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: local('Montserrat-Bold'),
+      url(/assets/fonts/Montserrat-Bold.woff2) format('woff2');
+}
+
+@font-face {
+   font-family: 'Poppins-Regular';
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: local('Poppins-Regular'),
+      url(/assets/fonts/Poppins-Regular.woff2) format('woff2');
+}
+
+@font-face {
+   font-family: 'Poppins-Bold';
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: local('Poppins-Bold'),
+      url(/assets/fonts/Poppins-Bold.woff2) format('woff2');
+}
+
+@font-face {
+   font-family: 'AvenirNextGeorgian';
+   font-style: normal;
+   font-weight: 700;
+   font-display: swap;
+   src: local('AvenirNextGeorgian'),
+      url(/assets/fonts/AvenirNextGeorgian.otf) format('otf');
+}
+
+* {
+   margin: 0 0 0 0;
+}
+
+button {
+   margin: 0 0 0 0;
+}
+
+:root {
+   --color-primary: #ff0202;
+   --color-primary-01: #ff02021a;
+   --color-primary-05: rgba(231, 29, 54, 0.05);
+   --color-primary-01: #ff02021a;
+   --color-secondary: #34343f;
+   --color-secondary-02: #34343f33;
+   --color-black: #000000;
+   --color-black-08: #000000cc;
+   --color-black-06: #00000099;
+   --color-texts: #b3b3b3;
+   --color-background: #f9f9f9;
+   --color-white: #ffffff;
+   --color-white-09: #ffffffe5;
+
+   /*margins / paddings / space-between */
+   --spacing-4: 4px;
+   --spacing-8: 8px;
+   --spacing-10: 10px;
+   --spacing-12: 12px;
+   --spacing-16: 16px;
+   --spacing-20: 20px;
+   --spacing-24: 24px;
+   --spacing-32: 32px;
+   --spacing-40: 40px;
+   --spacing-60: 60px;
+   --spacing-80: 80px;
+   --spacing-100: 100px;
+   --spacing-120: 120px;
+
+   /* font */
+   --font-10: 10px;
+   --font-12: 12px;
+   --font-14: 14px;
+   --font-16: 16px;
+   --font-18: 18px;
+   --font-20: 20px;
+   --font-22: 22px;
+   --font-30: 30px;
+   --font-40: 40px;
+   --font-50: 50px;
+   --font-48: 48px;
+
+   /* borders */
+   --rounded-10: 10px;
+   --rounded-20: 20px;
+
+   --border-radius-one-point-five: 1.5px;
+   --border-radius-2: 2px;
+
+   /* fonts */
+   --font-poppins: 'Poppins-Regular', sans-serif;
+   --font-poppins-bold: 'Poppins-Bold', sans-serif;
+   --font-montserrat: 'Montserrat-Regular', sans-serif;
+   --font-montserrat-bold: 'Montserrat-Bold', sans-serif;
+   --font-avenir: 'AvenirNextGeorgian', sans-serif;
+}
+
+[data-theme='dark'] {
+   --color-primary: #34343f;
+   --color-primary-05: rgba(52, 52, 63, 0.05);
+   --color-secondary: #ff0202;
+   --color-black: #ffffff;
+   --color-texts: #f9f9f9;
+   --color-background: #b3b3b3;
+   --color-background-light: #f9f9f9;
+   --color-white: #000000;
+   /* We can use tailwind CSS default theme colors as well */
+   --color-tailwind-theme: theme(colors.fuchsia.700);
+}
+
+[data-theme='light'] {
+   --color-primary: #ff0202;
+   --color-primary-05: rgba(231, 29, 54, 0.05);
+   --color-secondary: #34343f;
+   --color-black: #000000;
+   --color-texts: #b3b3b3;
+   --color-background: #f9f9f9;
+   --color-background-light: #efefef;
+   --color-white: #ffffff;
+}
+
+body {
+   background-color: var(--color-background-light);
+}
+
+.container {
+   max-width: 1440px;
+   box-sizing: border-box;
+   margin: 0 auto;
+}
+
+*[lang='en'] {
+   font-family: var(--font-poppins);
+}
+*[lang='ka'] {
+   font-family: var(--font-avenir);
+}
+
+@media screen and (min-width: 1024px) {
+   h1 {
+      font-size: var(--font-50);
+   }
+   h2 {
+      font-size: var(--font-40);
+   }
+   h3 {
+      font-size: var(--font-30);
+   }
+   p {
+      font-size: var(--font-20);
+   }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1025px) {
+   h1 {
+      font-size: var(--font-40);
+   }
+   h2 {
+      font-size: var(--font-30);
+   }
+   h3 {
+      font-size: var(--font-22);
+   }
+   p {
+      font-size: var(--font-16);
+   }
+}
+
+@media screen and (max-width: 479px) {
+   h1 {
+      font-size: var(--font-30);
+   }
+   h2 {
+      font-size: var(--font-24);
+   }
+   h3 {
+      font-size: var(--font-18);
+   }
+   p {
+      font-size: var(--font-12);
+   }
+}

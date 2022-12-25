@@ -1,43 +1,59 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import { useModalContext } from 'contexts/ModalContext/ModalContext';
+import type {NextPage} from 'next';
+import Head from 'next/head';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-
 const Home: NextPage = () => {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	const {isOpen, toggle} = useModalContext();
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-		<TWStyledButton isRed={false}>I am a button</TWStyledButton>
-      </main>
+	const toggleModal = () => {
+		toggle(!isOpen);
+	}
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-      </footer>
-    </div>
-  )
-}
+   return (
+      <div className="flex min-h-screen flex-col items-center justify-center py-2">
+         
+		 <TWStyledButton isRed={true} onClick={toggleModal}>toggle the modal</TWStyledButton>
+          {isOpen ? 
+		     (
+				<StyledButton>
+				<div>I am a button</div>
+				<button onClick={toggleModal}>close modal</button>
+				</StyledButton>
+			 ) : 
+			 <></>}
+         
+
+         <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+           <div>main body</div>
+         </main>
+
+         <footer className="flex h-24 w-full items-center justify-center border-t"></footer>
+      </div>
+   );
+};
 
 export default Home;
 
 interface Props {
-	isRed: boolean;
+   isRed: boolean;
 }
 
-
 const TWStyledButton = styled.button<Props>(({isRed}) => [
-	isRed ? tw` bg-red-400` : tw`bg-blue-400`,
-	tw`flex justify-center items-center w-full`
+   isRed ? tw` bg-red-400` : tw`bg-blue-400`,
+   tw`flex justify-center items-center w-full`,
 ]);
-	
 
-
-
-const StyledButton = styled.button`
-	background-color: red;
-	padding: 2rem;
+const StyledButton = styled.div`
+   background-color: red;
+   /* padding: 2rem; */
+   ${tw`w-full bg-app-color-white flex`}
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   background-color: red;
+   left: 0;
+   /* top: 0 */
 `;

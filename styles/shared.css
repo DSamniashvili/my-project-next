@@ -4,7 +4,7 @@
    font-weight: 400;
    font-display: swap;
    src: local('Montserrat-Regular'),
-      url(/assets/fonts/Montserrat-Regular.woff2) format('woff2');
+      url(/fonts/Montserrat-Regular.woff2) format('woff2');
 }
 
 @font-face {
@@ -13,7 +13,7 @@
    font-weight: 700;
    font-display: swap;
    src: local('Montserrat-Bold'),
-      url(/assets/fonts/Montserrat-Bold.woff2) format('woff2');
+      url(/fonts/Montserrat-Bold.woff2) format('woff2');
 }
 
 @font-face {
@@ -22,7 +22,7 @@
    font-weight: 400;
    font-display: swap;
    src: local('Poppins-Regular'),
-      url(/assets/fonts/Poppins-Regular.woff2) format('woff2');
+      url(/fonts/Poppins-Regular.woff2) format('woff2');
 }
 
 @font-face {
@@ -30,8 +30,7 @@
    font-style: normal;
    font-weight: 700;
    font-display: swap;
-   src: local('Poppins-Bold'),
-      url(/assets/fonts/Poppins-Bold.woff2) format('woff2');
+   src: local('Poppins-Bold'), url(/fonts/Poppins-Bold.woff2) format('woff2');
 }
 
 @font-face {
@@ -40,7 +39,7 @@
    font-weight: 700;
    font-display: swap;
    src: local('AvenirNextGeorgian'),
-      url(/assets/fonts/AvenirNextGeorgian.otf) format('otf');
+      url(/fonts/AvenirNextGeorgian.otf) format('otf');
 }
 
 * {

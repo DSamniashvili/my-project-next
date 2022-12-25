@@ -1,3 +1,5 @@
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
+import nextI18nextConfig from 'next-i18next.config';
 import AppPageHeader from '@components/shared/AppPageHeader';
 import {useModalContext} from '@contexts/ModalContext/ModalContext';
 import type {NextPage} from 'next';
@@ -13,7 +15,7 @@ const Home: NextPage = () => {
 
    return (
       <div className="flex min-h-screen flex-col items-center justify-center py-2">
-         <AppPageHeader title="next12" />
+         <AppPageHeader title={'hello'} />
          <TWStyledButton isRed={true} onClick={toggleModal}>
             toggle the modal
          </TWStyledButton>
@@ -34,6 +36,19 @@ const Home: NextPage = () => {
       </div>
    );
 };
+
+export async function getStaticProps({locale}: {locale: string}) {
+   return {
+      props: {
+         ...(await serverSideTranslations(
+            locale,
+            ['common'],
+            nextI18nextConfig,
+         )),
+         // Will be passed to the page component as props
+      },
+   };
+}
 
 export default Home;
 

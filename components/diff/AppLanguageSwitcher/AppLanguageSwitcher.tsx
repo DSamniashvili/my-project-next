@@ -25,9 +25,9 @@ const AppLanguageSwitcher = () => {
             {locales?.map((locale, index) => {
                return (
                   <option value={locale} key={locale}>
-                     <Link href={{pathname, query}} as={asPath} locale={locale}>
-                        {locale}
-                     </Link>
+                     {/* <Link href={{pathname, query}} as={asPath} locale={locale}> */}
+                     {locale}
+                     {/* </Link> */}
                   </option>
                );
             })}

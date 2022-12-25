@@ -1,3 +1,5 @@
+const {i18n} = require('./next-i18next.config');
+
 /** @type {import('next').NextConfig} */
 module.exports = {
    reactStrictMode: true,
@@ -11,8 +13,5 @@ module.exports = {
    images: {
       domains: ['unsplash.com', 'images.unsplash.com'],
    },
-   i18n: {
-      defaultLocale: 'en',
-      locales: ['en', 'de'],
-   },
+   i18n,
 };

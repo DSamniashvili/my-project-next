@@ -62,7 +62,7 @@ export const SUnificationLink = styled.div`
    a {
       ${tw`app-min-width-small:justify-start`}
       p {
-         ${tw`font-semibold`}
+         ${tw`font-semibold text-app-font-20 app-max-width-small:text-app-font-14`}
       }
    }
 `;

@@ -17,7 +17,7 @@ export const SEventBannerContent = styled.div`
    ${tw`flex gap-5 items-center app-max-width-small:gap-2`}
    a {
       p {
-         ${tw`flex-none app-max-width-small:text-app-font-10`}
+         ${tw`flex-none text-app-font-14 app-max-width-small:text-app-font-10`}
       }
    }
 `;

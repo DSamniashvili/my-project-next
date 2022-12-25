@@ -1,31 +1,31 @@
-import { useModalContext } from '@contexts/ModalContext/ModalContext';
+import {useModalContext} from '@contexts/ModalContext/ModalContext';
 import type {NextPage} from 'next';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
 const Home: NextPage = () => {
-	const {isOpen, toggle} = useModalContext();
+   const {isOpen, toggle} = useModalContext();
 
-	const toggleModal = () => {
-		toggle(!isOpen);
-	}
+   const toggleModal = () => {
+      toggle(!isOpen);
+   };
 
    return (
       <div className="flex min-h-screen flex-col items-center justify-center py-2">
-         
-		 <TWStyledButton isRed={true} onClick={toggleModal}>toggle the modal</TWStyledButton>
-          {isOpen ? 
-		     (
-				<StyledButton>
-				<div>I am a button</div>
-				<button onClick={toggleModal}>close modal</button>
-				</StyledButton>
-			 ) : 
-			 <></>}
-         
+         <TWStyledButton isRed={true} onClick={toggleModal}>
+            toggle the modal
+         </TWStyledButton>
+         {isOpen ? (
+            <StyledButton>
+               <div>I am a button</div>
+               <button onClick={toggleModal}>close modal</button>
+            </StyledButton>
+         ) : (
+            <></>
+         )}
 
          <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-           <div>main body</div>
+            <div>main body</div>
          </main>
 
          <footer className="flex h-24 w-full items-center justify-center border-t"></footer>

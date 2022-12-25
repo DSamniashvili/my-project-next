@@ -11,7 +11,6 @@ import {
 } from './SAppEventBanner.styled';
 import {EventBannerProps} from './AppEventBanner.types';
 import AppLinkButton from '@components/shared/AppLinkButton/AppLinkButton';
-import {ButtonSizes} from '@components/shared/AppLinkButton/AppLinkButton.types';
 import {CloseButton} from '@assets/icons/CloseButton';
 
 const AppEventBanner: FC<EventBannerProps> = ({
@@ -34,12 +33,7 @@ const AppEventBanner: FC<EventBannerProps> = ({
                   <SEventBannerContentDesctiption>
                      {description}
                   </SEventBannerContentDesctiption>
-                  <AppLinkButton
-                     href={url}
-                     underline
-                     text={linkText}
-                     size={ButtonSizes.SMALL}
-                  />
+                  <AppLinkButton href={url} underline text={linkText} />
                </SEventBannerContent>
                <SEventBannerCloseButton onClick={handleCloseBanner}>
                   <CloseButton />

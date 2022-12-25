@@ -1,6 +1,5 @@
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 import AppLinkButton from './AppLinkButton';
-import {ButtonSizes} from './AppLinkButton.types';
 
 export default {
    title: 'components / shared / AppLinkButton',
@@ -20,7 +19,6 @@ WithArrow.args = {
    text: 'Learn more',
    hasArrow: true,
    underline: false,
-   size: ButtonSizes.SMALL,
 };
 
 export const WithoutArrow: ComponentStory<typeof AppLinkButton> = Template.bind(
@@ -32,7 +30,7 @@ WithoutArrow.args = {
    text: 'Find out',
    hasArrow: false,
    underline: false,
-   size: ButtonSizes.LARGE,
+   bold: true,
 };
 
 export const WithUnderline: ComponentStory<typeof AppLinkButton> =
@@ -43,5 +41,4 @@ WithUnderline.args = {
    text: 'Learn more',
    hasArrow: false,
    underline: true,
-   size: ButtonSizes.SMALL,
 };

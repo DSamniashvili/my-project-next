@@ -1,31 +1,19 @@
 'use client';
 
-import React, {FC} from 'react';
+import React from 'react';
+import {NextPage} from 'next';
 import {SPageHeader} from './SAppPageHeader.styled';
 import {IAppPageHeaderProps} from './AppPageHeader.types';
-import AppLanguageSwitcher from '@components/diff/AppLanguageSwitcher';
+import LanguageSwitcher from '@components/diff/LanguageSwitcher';
 import ToggleTheme from '@components/diff/ToggleTheme';
-import { useLanguageSwitcherContext } from '@contexts/index';
 
-const AppPageHeader: FC<IAppPageHeaderProps> = ({title, path = '/'}) => {
-   const {
-      currentLanguage,
-      toggleLanguageSwitcherModal,
-      languageSwitcherModalOpen,
-   } = useLanguageSwitcherContext();
-
-   const toggleModal = () => {
-      toggleLanguageSwitcherModal(!languageSwitcherModalOpen);
-   };
-
+const AppPageHeader: NextPage<IAppPageHeaderProps> = ({title, path = '/'}) => {
    return (
-      <>
-         <AppLanguageSwitcher path={path} />
-         <SPageHeader isBold="true">
-            <ToggleTheme />{' '}
-            <button onClick={toggleModal}>{currentLanguage}</button>
-         </SPageHeader>
-      </>
+      <SPageHeader isBold="true">
+         <ToggleTheme />
+         <LanguageSwitcher path={path} />
+         PageHeader component across all pagess {title}
+      </SPageHeader>
    );
 };
 

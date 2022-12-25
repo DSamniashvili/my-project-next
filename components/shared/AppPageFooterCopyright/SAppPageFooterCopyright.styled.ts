@@ -6,5 +6,5 @@ export const SFooterWrapper = styled.div`
 `;
 
 export const SFooterContent = styled.div`
-   ${tw`flex items-center gap-x-[40px] text-center`}
+   ${tw`flex items-center gap-x-10 text-center text-app-font-15 app-max-width-small:text-app-font-12`}
 `;

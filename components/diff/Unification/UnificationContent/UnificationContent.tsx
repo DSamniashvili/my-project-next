@@ -1,8 +1,7 @@
 'use client';
 import AppButton from '@components/shared/AppButton';
 import AppLinkButton from '@components/shared/AppLinkButton/AppLinkButton';
-import {ButtonSizes} from '@components/shared/AppLinkButton/AppLinkButton.types';
-import { useDeviceDetect } from '@hooks/useDeviceDetect';
+import {useDeviceDetect} from '@hooks/useDeviceDetect';
 import {FC} from 'react';
 
 import {
@@ -24,8 +23,8 @@ export const UnificationContent: FC<UnificationContentProps> = ({
    title,
    image,
 }) => {
-   const {isMobile} = useDeviceDetect();
    const isReverse = index % 2 !== 0;
+   const {isMobile} = useDeviceDetect();
 
    return (
       // return white and reversed component if index module is 0
@@ -40,18 +39,10 @@ export const UnificationContent: FC<UnificationContentProps> = ({
                </SPersonalizedServicesContentParagraph>
                <SUnificationLink>
                   {isMobile ? (
-                     <AppLinkButton
-                        href="#"
-                        text={button_text}
-                        size={ButtonSizes.SMALL}
-                     />
+                     <AppLinkButton href="#" text={button_text} />
                   ) : !isReverse ? (
                      // return different button components on different indexes
-                     <AppLinkButton
-                        href="#"
-                        text={button_text}
-                        size={ButtonSizes.SMALL}
-                     />
+                     <AppLinkButton href="#" text={button_text} />
                   ) : (
                      <AppButton>{button_text}</AppButton>
                   )}

@@ -1,6 +1,6 @@
 import {AppButtonProps} from './AppButton.types';
+import {ExpandStyled} from 'types';
 import {SAppButton} from './AppButton.styled';
-import { ExpandStyled } from 'types';
 
 const AppButton = ({
    children,

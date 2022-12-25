@@ -1,9 +1,8 @@
-
 import Air from '@assets/icons/Air';
 import Land from '@assets/icons/Land';
 import Ocean from '@assets/icons/Ocean';
 import Rail from '@assets/icons/Rail';
-import { AppServicesEnum } from '@components/shared/AppServiceCard/AppServiceCard.types';
+import {AppServicesEnum} from '@components/shared/AppServiceCard/AppServiceCard.types';
 
 interface IconByServiceProps {
    service: AppServicesEnum;

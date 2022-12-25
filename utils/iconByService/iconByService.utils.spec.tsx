@@ -1,4 +1,4 @@
-import { AppServicesEnum } from '@components/shared/AppServiceCard/AppServiceCard.types';
+import {AppServicesEnum} from '@components/shared/AppServiceCard/AppServiceCard.types';
 import {render, screen} from '@testing-library/react';
 import {IconByService} from './iconByService.utils';
 

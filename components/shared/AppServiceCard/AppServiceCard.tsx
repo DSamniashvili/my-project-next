@@ -11,7 +11,7 @@ import {
 import {AppServiceCardProps} from './AppServiceCard.types';
 import AppLinkButton from '../AppLinkButton';
 import {useDeviceDetect} from '@hooks/useDeviceDetect';
-import { IconByService } from '@utils/iconByService/iconByService.utils';
+import {IconByService} from '@utils/iconByService/iconByService.utils';
 
 const AppServiceCard: NextPage<AppServiceCardProps> = ({
    service,

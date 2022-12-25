@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 import AppPageFooter from './AppPageFooter';
 
 describe('[Component] AppPageFooter', () => {
-   it.skip('should render component', () => {
+   it('should render component', () => {
       render(
          <AppPageFooter
             navigation={[
@@ -21,7 +21,7 @@ describe('[Component] AppPageFooter', () => {
          />,
       );
 
-      expect(screen.getByRole('link')).toBeInTheDocument();
+      expect(screen.getAllByRole('link')[0]).toBeInTheDocument();
    });
 
    it('should render correct titles', () => {

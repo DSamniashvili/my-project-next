@@ -1,0 +1,23 @@
+import {useCallback, useEffect, useState} from 'react';
+
+export const useDeviceDetect = () => {
+   const [isMobile, setMobile] = useState(false);
+
+   const checkIsMobile = useCallback(() => {
+      const userAgent =
+         typeof window.navigator === 'undefined' ? '' : navigator.userAgent;
+
+      const mobile = Boolean(
+         userAgent.match(
+            /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i,
+         ),
+      );
+      setMobile(mobile);
+   }, []);
+
+   useEffect(() => {
+      checkIsMobile();
+   }, [checkIsMobile]);
+
+   return {isMobile};
+};

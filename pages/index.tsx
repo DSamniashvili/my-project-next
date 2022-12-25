@@ -1,6 +1,5 @@
-import { useModalContext } from 'contexts/ModalContext/ModalContext';
+import { useModalContext } from '@contexts/ModalContext/ModalContext';
 import type {NextPage} from 'next';
-import Head from 'next/head';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 

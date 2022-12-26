@@ -1,28 +1,33 @@
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import nextI18nextConfig from 'next-i18next.config';
-import AppPageHeader from '@components/shared/AppPageHeader';
-import {useModalContext} from '@contexts/ModalContext/ModalContext';
-import type {NextPage} from 'next';
-import styled from 'styled-components';
-import tw from 'twin.macro';
 import {AppContainer} from '@components/containers/AppContainer/AppContainer';
 import {LandingPage} from '@components/appPages/landing/LandingPage';
+import {request} from '../lib/datocms';
 
-const Home: NextPage = () => {
-   const {isOpen, toggle} = useModalContext();
-
-   const toggleModal = () => {
-      toggle(!isOpen);
-   };
-
+const Home = ({data}: {data: any}) => {
    return (
       <AppContainer>
+         <div>{JSON.stringify(data, null, 2)}</div>
          <LandingPage />
       </AppContainer>
    );
 };
 
+const HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
+	allPosts(first: $limit) {
+		id
+	  title
+	  slug
+	}
+  }`;
+
 export async function getStaticProps({locale}: {locale: string}) {
+   const data = await request({
+      query: HOMEPAGE_QUERY,
+      variables: {limit: 10},
+      includeDrafts: true,
+      excludeInvalid: true,
+   });
    return {
       props: {
          ...(await serverSideTranslations(
@@ -30,31 +35,10 @@ export async function getStaticProps({locale}: {locale: string}) {
             ['common'],
             nextI18nextConfig,
          )),
+         data,
          // Will be passed to the page component as props
       },
    };
 }
 
 export default Home;
-
-// interface Props {
-//    isRed: boolean;
-// }
-
-// const TWStyledButton = styled.button<Props>(({isRed}) => [
-//    isRed ? tw` bg-red-400` : tw`bg-blue-400`,
-//    tw`flex justify-center items-center w-full`,
-// ]);
-
-// const StyledButton = styled.div`
-//    background-color: red;
-//    /* padding: 2rem; */
-//    ${tw`w-full bg-app-color-white flex`}
-//    position: absolute;
-//    width: 100%;
-//    height: 100%;
-//    overflow: hidden;
-//    background-color: red;
-//    left: 0;
-//    /* top: 0 */
-// `;

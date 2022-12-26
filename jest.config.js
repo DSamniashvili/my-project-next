@@ -17,6 +17,7 @@ module.exports = {
       '@utils/(.*)': '<rootDir>utils/$1',
       '@hooks/(.*)': '<rootDir>hooks/$1',
       '@contexts/(.*)': '<rootDir>contexts/$1',
+      '@providers/(.*)': '<rootDir>providers/$1',
    },
    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
    testEnvironment: 'jsdom',

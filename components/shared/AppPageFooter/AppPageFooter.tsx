@@ -11,9 +11,8 @@ import {
    SAppImageWrapper,
 } from './AppPageFooter.styled';
 import Image from 'next/image';
-import OomofoxLogo from '@assets/images/omofoxlogo.png';
+import OmofoxLogo from '@assets/images/omofoxlogo.png';
 import AppPageFooterCopyright from '../AppPageFooterCopyright';
-import {NextPage} from 'next';
 import routes from '@constant/routes';
 
 const navigation = [
@@ -129,7 +128,7 @@ const AppPageFooter = () => {
          <SAppPageFooterLogo>
             <SAppImageWrapper>
                <Image
-                  src={OomofoxLogo}
+                  src={OmofoxLogo}
                   alt="Omofox Logo"
                   style={{objectFit: 'contain'}}
                   layout="fill"

@@ -4,7 +4,7 @@ import {useRouter} from 'next/router';
 
 const AppLanguageSwitcher = () => {
    const router = useRouter();
-   const {locales, locale: activeLocale, pathname, query, asPath} = router;
+   const {locales, locale: activeLocale} = router;
 
    const handleLocaleChange = (event: any) => {
       const value = event.target.value;
@@ -16,18 +16,11 @@ const AppLanguageSwitcher = () => {
 
    return (
       <header>
-         <nav>
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-         </nav>
-
          <select onChange={handleLocaleChange} value={activeLocale}>
-            {locales?.map((locale, index) => {
+            {locales?.map((locale: string) => {
                return (
                   <option value={locale} key={locale}>
-                     {/* <Link href={{pathname, query}} as={asPath} locale={locale}> */}
                      {locale}
-                     {/* </Link> */}
                   </option>
                );
             })}

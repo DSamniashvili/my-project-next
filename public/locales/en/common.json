@@ -1,3 +1,6 @@
 {
-	"hello": "hello"
+	"sign_in": "Sign in",
+	"products": "Products",
+	"company": "Company",
+	"get_started": "Get started"
 }

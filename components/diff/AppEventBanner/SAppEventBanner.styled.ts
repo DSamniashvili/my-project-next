@@ -6,11 +6,11 @@ export const SEventBannerWrapper = styled.div`
 `;
 
 export const SAppEventBannerContainer = styled.div`
-   ${tw`bg-app-color-secondary py-app-padding-24 px-app-padding-100 flex justify-center items-center app-max-width-small:px-app-padding-24 app-max-width-small:py-app-padding-16  w-full`}
+   ${tw`bg-app-color-secondary py-app-padding-24 flex justify-center items-center app-max-width-small:px-app-padding-24 app-max-width-small:py-app-padding-16  w-full`}
 `;
 
 export const SEventBannerContentContainer = styled.div`
-   ${tw`flex justify-between items-center w-full`}
+   ${tw`flex justify-between items-center w-full px-app-padding-100 app-max-width-extra-small:px-0`}
 `;
 
 export const SEventBannerContent = styled.div`

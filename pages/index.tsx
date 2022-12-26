@@ -3,11 +3,13 @@ import nextI18nextConfig from 'next-i18next.config';
 import {AppContainer} from '@components/containers/AppContainer/AppContainer';
 import {LandingPage} from '@components/appPages/landing/LandingPage';
 import {request} from '../lib/datocms';
+import {useTranslation} from 'next-i18next';
 
 const Home = ({data}: {data: any}) => {
+   const {t} = useTranslation();
    return (
       <AppContainer>
-         <div>{JSON.stringify(data, null, 2)}</div>
+         {/* <div>{JSON.stringify(data, null, 2)}</div> */}
          <LandingPage />
       </AppContainer>
    );

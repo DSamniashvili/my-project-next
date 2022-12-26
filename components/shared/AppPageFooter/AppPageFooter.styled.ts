@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const SAppPageFooter = styled.div`
-   ${tw`bg-app-color-background py-app-padding-80 app-max-width-small:py-10 px-app-padding-100 app-max-width-small:px-6`}
+   ${tw`py-app-padding-80 app-max-width-small:py-10 px-app-padding-100 app-max-width-small:px-6`}
 `;
 
 export const SAppPageLinksSection = styled.div`

@@ -11,6 +11,7 @@ import {
 import AppLinkButton from '@components/shared/AppLinkButton/AppLinkButton';
 import {CloseButton} from '@assets/icons/CloseButton';
 import {NextPage} from 'next';
+import ToggleTheme from '../ToggleTheme';
 
 const AppEventBannerContent = {
    title: 'UPCOMING WEBINAR:',
@@ -32,6 +33,7 @@ const AppEventBanner: NextPage = () => {
          <SAppEventBannerContainer>
             <SEventBannerContentContainer>
                <SEventBannerContent>
+                  <ToggleTheme />
                   <SEventBannerContentTitle>{title}</SEventBannerContentTitle>
                   <SEventBannerContentDesctiption>
                      {description}

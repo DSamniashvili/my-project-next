@@ -14,7 +14,15 @@ const ToggleTheme = () => {
 
    if (!mounted) return null;
 
-   return <button onClick={handleToggleTheme}>Change the theme!</button>;
+   return (
+      <button
+         onClick={handleToggleTheme}
+         style={{
+            color: '#fff',
+         }}>
+         {theme === 'light' ? 'dark' : 'light'}
+      </button>
+   );
 };
 
 export default ToggleTheme;

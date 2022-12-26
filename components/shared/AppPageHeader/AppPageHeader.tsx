@@ -30,7 +30,7 @@ const AppPageHeader: NextPage = () => {
                <>
                   <SPageHeaderLeftPanel>
                      <SAppImageWrapper>
-                        <Link href={'/'}>
+                        <Link href={'/'} passHref>
                            <Image
                               src={OomofoxLogo}
                               alt="Omofox Logo"

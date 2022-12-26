@@ -6,14 +6,19 @@ exports[`[Component] AppEventBanner should render component 1`] = `
     class="SAppEventBannerstyled__SEventBannerWrapper-sc-1czc15b-0 effGGI"
   >
     <div
-      class="SAppEventBannerstyled__SAppEventBannerContainer-sc-1czc15b-1 fMOxtL container"
+      class="SAppEventBannerstyled__SAppEventBannerContainer-sc-1czc15b-1 cXnYOT container"
     >
       <div
-        class="SAppEventBannerstyled__SEventBannerContentContainer-sc-1czc15b-2 bTlGa"
+        class="SAppEventBannerstyled__SEventBannerContentContainer-sc-1czc15b-2 hbvGET"
       >
         <div
           class="SAppEventBannerstyled__SEventBannerContent-sc-1czc15b-3 hDeden"
         >
+          <button
+            style="color: rgb(255, 255, 255);"
+          >
+            light
+          </button>
           <h3
             class="SAppEventBannerstyled__SEventBannerContentTitle-sc-1czc15b-4 gaRFeE"
           >

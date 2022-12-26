@@ -11,6 +11,6 @@ describe('[Component] PageHeader', () => {
    it('should render component', () => {
       render(<PageHeader />);
 
-      expect(screen.getByText('Change the theme!')).toBeInTheDocument();
+      expect(screen.getByText('sign_in')).toBeInTheDocument();
    });
 });
